@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<h2>Cadastro de Livros </h2>
+		<form action="/produtos" method="POST">
+			<div class="erros">
+				<%if(errosValidacao){%>
+					<ul>
+						<%for(var i = 0; i < errosValidacao.length; i++) {%>
+							<li><%=errosValidacao[i].param%> - <%=errosValidacao[i].msg%></li>	
+						<%}%>
+					</ul>
+				<%}%>
+			</div>
+				<div>
+					<label for="titulo">Título:</label>
+					<input type="text" id="titulo" name="titulo" value="<%=produto.titulo%>" placeholder="Título do Livro"/>
+				</div>
+				<div>
+					<label for="preco">Preço:</label>
+					<input type="text" id="preco" name="preco" value="<%=produto.preco%>" placeholder="100.00"/>
+				</div>
+				<div>
+					<label for="descricao">Descrição:</label>
+					<textArea cols="30" id="descricao" name="descricao" placeholder="Descrição do Livro"><%=produto.descricao%></textArea>
+				</div>
+			<input type="submit" value="Gravar" />
+		</form>
+	</body>
+</html>
