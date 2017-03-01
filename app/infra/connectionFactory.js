@@ -1,5 +1,5 @@
 var pgp = require('pg-promise')({});
-var _connectionPath_Development = 'postgres://postgres:123@localhost:5432/casadocodigo_nodejs';
+var _connectionPath_Development = 'postgres://postgres:123@localhost:5432/casadocodigo_nodejs22';
 var _connectionPath_Test = 'postgres://postgres:123@localhost:5432/casadocodigo_nodejs_test';
 var client;
 

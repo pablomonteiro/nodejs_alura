@@ -15,7 +15,8 @@
     "express-load": "^1.1.15",
     "express-validator": "^3.1.2",
     "pg": "^6.1.2",
-    "pg-promise": "^5.5.4"
+    "pg-promise": "^5.5.4",
+    "socket.io": "^1.7.2"
   },
   "devDependencies": {
     "mocha": "^3.2.0",

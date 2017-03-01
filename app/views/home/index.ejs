@@ -248,5 +248,13 @@
         </div>
     </div>
 </footer>
+<script src="/socket.io/socket.io.js"></script><!-- importando socket.io para a pagina -->
+<script >
+    var socket = io(); //ao importar o socket io, a função io() já fica disponível.
+    socket.on('promocaoNova', function(data) {
+        console.log('asd');
+        alert('Livro em promoção: ' + data.livro.id);
+    })
+</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 module.exports = function(app) {
 	app.get('/produtos', function(req, res) {
 
-		var connection = app.infra.connectionFactory(app);
+		var connection = app.infra.connectionFactory();
 		var produtosDAO = new app.infra.ProdutosDAO(connection);
 		
 		produtosDAO.listAll(
@@ -26,7 +26,7 @@ module.exports = function(app) {
 
 	app.post('/produtos', function(req, res) {
 
-		var connection = app.infra.connectionFactory(app);
+		var connection = app.infra.connectionFactory();
 		var produtosDAO = new app.infra.ProdutosDAO(connection);
 		var produto = req.body;
 
