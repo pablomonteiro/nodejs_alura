@@ -6,7 +6,6 @@ module.exports = function(app) {
 		
 		produtosDAO.listAll(
 			function(results) {
-				console.log(results);
 				res.format({
 					html: function() {
 						res.render('home/index', {livros:results});
