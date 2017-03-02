@@ -26,11 +26,11 @@ module.exports = function() {
 		res.status(404).render('exceptions/404');
 		next();
 	});
-
+/*
 	app.use(function(error, req, res, next) {
 		res.status(500).render('exceptions/500');
 		next();
 	});
-
+*/
 	return app;
 }
