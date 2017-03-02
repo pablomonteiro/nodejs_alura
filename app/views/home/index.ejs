@@ -49,19 +49,6 @@
         <a href="/" id="logo">
             <!-- <img src="http://cdn.shopify.com/s/files/1/0155/7645/t/177/assets/casa-do-codigo-blue.svg?11981592617154272979" alt="Casa do Codigo"> -->
         </a>
-
-        <div id="header-content">
-            <nav id="main-nav">
-
-                <ul class="clearfix">
-                    <li><a href="/cart" rel="nofollow">Seu carrinho</a></li>
-
-                    <li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre</a></li>
-
-                    <li><a href="/pages/perguntas-frequentes" rel="nofollow">Perguntas</a></li>
-                </ul>
-            </nav>
-        </div>
     </div>
 </header>
 <nav class="categories-nav">
@@ -86,7 +73,26 @@
 <!-- inicio da listagem em si-->
 <section id="index-section" class="container middle" ng-controller="HomeController">
 
-   
+    <h1 class="cdc-call">Últimos dias com os preços promocionais.
+        Aproveite!</h1>
+
+    <ul class="clearfix book-collection">
+        <%for(i=0; i<livros.length; i++) {%>
+            <li>
+                <a href="linkDetalhe" class="block clearfix">
+                    <h2 class="product-title"><%=livros[i].titulo%></h2>
+                    <img width="143"
+                         height="202"
+                         src="linkImagemCapa"
+                         alt="<%=livros[i].titulo%>"
+                         title="<%=livros[i].titulo%>"/>
+
+                    <small class="buy-button">Compre</small>
+                </a>
+            </li>
+        <%}%>
+
+    </ul>
 
     <h2 class="cdc-call">Diferenciais da Casa do Código</h2>
 
